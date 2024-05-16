@@ -1,0 +1,101 @@
+{
+  "project": {
+    "id": "6ok5vq",
+    "name": "PoC",
+    "creationTs": 1715843801436,
+    "lastModifiedTs": 1715846392201
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "bounding_box_visualizer_8ksgtg",
+        "nodeSpecId": "bounding_box_visualizer",
+        "customData": {
+          "previewX": 576,
+          "previewY": -16,
+          "previewWidth": 368,
+          "previewHeight": 288
+        },
+        "uiData": {
+          "posX": 672,
+          "posY": 25.5,
+          "width": 230,
+          "height": 180,
+          "selected": false
+        },
+        "propValues": {
+          "keypointScale": 5,
+          "color": "#fe7508",
+          "hidePreview": false
+        },
+        "incomingEdges": {
+          "boundingBoxResult": [
+            {
+              "sourceNodeId": "object_detection_zsz6i1",
+              "outputId": "objectDetectionResult"
+            }
+          ],
+          "image": [
+            {
+              "sourceNodeId": "live_camera_hjt8g7",
+              "outputId": "image"
+            }
+          ]
+        }
+      },
+      {
+        "id": "object_detection_zsz6i1",
+        "nodeSpecId": "object_detection",
+        "customData": {
+          "previewX": 272,
+          "previewY": 16,
+          "previewWidth": 320,
+          "previewHeight": 240
+        },
+        "uiData": {
+          "posX": 336,
+          "posY": 0,
+          "width": 176,
+          "height": 130,
+          "selected": false
+        },
+        "propValues": {
+          "score": 0.5,
+          "boxesCount": 20
+        },
+        "incomingEdges": {
+          "image": [
+            {
+              "sourceNodeId": "live_camera_hjt8g7",
+              "outputId": "image"
+            }
+          ]
+        }
+      },
+      {
+        "id": "live_camera_hjt8g7",
+        "nodeSpecId": "live_camera",
+        "customData": {
+          "runContinuously": true,
+          "initialWidth": 240,
+          "initialHeight": 320,
+          "previewX": 272,
+          "previewY": -16,
+          "previewWidth": 240,
+          "previewHeight": 320
+        },
+        "uiData": {
+          "posX": 0,
+          "posY": 64,
+          "width": 176,
+          "height": 105,
+          "selected": true
+        },
+        "propValues": {
+          "hidePreview": true
+        }
+      }
+    ]
+  },
+  "customNodeUrls": []
+}
